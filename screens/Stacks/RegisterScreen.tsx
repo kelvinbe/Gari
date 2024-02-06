@@ -446,21 +446,6 @@ const RegisterScreen = (props: Props) => {
                     <Divider style={{marginTop: 20, marginBottom: 20}} >
                         Or
                     </Divider>
-                    <View style={styles.iconButtonsContainer} >
-                        <IconButton name="google" containerStyle={{
-                            marginRight: Platform.OS === 'ios' ? 0 : 20
-                        }} onPress={()=>{googleLogin(navigateToLogin)}} iconType='font-awesome' >
-                            <GoogleIcon width={24} height={24} />
-                        </IconButton>
-                        {/* {Platform.OS === 'ios' ? <IconButton shadow containerStyle={{
-                            marginHorizontal: 10
-                        }} name="apple" iconType='font-awesome' >
-                            <AppleIcon fill="black" width={24} height={24} />
-                        </IconButton> : undefined}
-                        <IconButton name="facebook" onPress={()=>{facebookLogin(navigateToLogin)}} iconType='font-awesome' >
-                            <FacebookIcon width={24} height={24} />
-                        </IconButton> */}
-                    </View>
                 </View>
                 <View style={styles.bottomTextContainer} >
                     <Text style={styles.leftText} >

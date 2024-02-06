@@ -67,9 +67,21 @@ export default function App() {
   else{
     console.log('we got here')
     return (
-      <View style={styles.container}>
-        <LoginScreen />
-      </View>
+      <ErrorBoundary>
+      <Provider store={store}>
+
+        <ThemeProvider theme={theme} >
+          <SafeAreaProvider>
+          {/* <StatusBar backgroundColor={theme.lightColors?.white} style="dark" /> */}
+            {/* <SafeAreaView style={{width: "100%", height: "100%"}}> */}
+              <StatefullApp/>
+              
+            {/* </SafeAreaView> */}
+            <ToastContainer/>
+          </SafeAreaProvider>
+        </ThemeProvider>
+      </Provider>
+    </ErrorBoundary>
     );
 
   }
